@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precise Navigation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Home navigation system</h1>
+    <div class="house-map">
+        <!-- Rooms with updated positions -->
+        <div class="cell room" id="living-room" data-x="0" data-y="0">Living Room</div>
+        <div class="cell road"></div>
+        <div class="cell room" id="kitchen" data-x="0" data-y="2">parking</div>
+        <div class="cell road"></div>
+        <div class="cell room" id="washroom" data-x="1" data-y="0">Washroom</div>
+        <div class="cell road"></div>
+        <div class="cell room" id="playground" data-x="2" data-y="2">kitchen</div>
+        <div class="cell room" id="guest-room" data-x="1" data-y="2">Guest Room</div>
+        <div class="cell room" id="parking" data-x="2" data-y="0">Playground</div>
+        <div id="user" class="user"></div>
+    </div>
+    <div class="controls">
+        <label for="destination">Go to:</label>
+        <select id="destination">
+            <option value="kitchen">Kitchen</option>
+            <option value="washroom">Washroom</option>
+            <option value="playground">Playground</option>
+            <option value="guest-room">Guest Room</option>
+            <option value="parking">Parking</option>
+        </select>
+        <button onclick="navigate()">Navigate</button>
+    </div>
+    <div id="path-container"></div> <!-- Dotted Path Container -->
+    <script src="script.js"></script>
+</body>
+</html>
